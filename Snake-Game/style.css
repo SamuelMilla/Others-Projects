@@ -1,0 +1,96 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Open Sans', sans-serif;
+}
+
+body {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: rgb(84,97,235);
+    background: linear-gradient(322deg, rgba(84,97,235,1) 3%, rgba(164,195,255,1) 31%, rgba(255,184,252,1) 72%, rgba(117,254,255,1) 100%);
+}
+
+.wrapper {
+    width: 65vmin;
+    height: 70vmin;
+    display: flex;
+    overflow: hidden;
+    flex-direction: column;
+    justify-content: center;
+    border-radius: 55px;
+    background: rgb(51,0,255);
+    background: linear-gradient(333deg, rgba(51,0,255,1) 8%, rgba(222,0,255,1) 29%, rgba(244,0,255,1) 42%, rgba(221,2,208,1) 54%, rgba(121,9,9,1) 77%, rgba(36,0,0,1) 100%);
+    box-shadow: 0 20px 40px rgba(52, 87, 220. 0.2);
+}
+
+.game-details {
+    color: #BBC6DC;
+    font-weight: 500;
+    font-size: 1.2rem;
+    padding: 20px 27px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.play-board {
+    height: 100%;
+    width: 100%;
+    display: grid;
+    background: rgb(69,69,69);
+    background: radial-gradient(circle, rgb(115, 113, 113) 0%, rgb(0, 0, 0) 100%);
+    grid-template: repeat(30, 1fr) / repeat(30, 1fr);
+}
+
+.play-board .food {
+    background: rgb(0,35,255);
+    background: radial-gradient(circle, rgb(255, 6, 6) 1%, rgb(0, 0, 0) 100%);
+    border-radius: 15px;
+}
+
+.play-board .head {
+    background: rgb(249,149,232);
+    background: linear-gradient(90deg, rgba(249,149,232,1) 0%, rgba(137,124,242,1) 100%);
+    border-radius: 15px;
+}
+
+.controls {
+    display: none;
+    justify-content: space-between;
+}
+
+.controls i {
+    padding: 25px 0;
+    text-align: center;
+    font-size: 1.3rem;
+    color: #B8C6DC;
+    width: calc(100% / 4);
+    cursor: pointter;
+    border-right: 1px solid #171B26;
+}
+
+@media screen and (max-width: 2000px) {
+    .wrapper {
+        width: 65vmin;
+        height: 90vmin;
+    }
+
+    .game-details {
+        font-size: 1rem;
+        padding: 15px 27px;
+    }
+
+    .controls {
+        display: flex;
+    }
+
+    .controls {
+        padding: 15px 0;
+        font-size: 1rem;
+    }
+}
